@@ -13,5 +13,7 @@ for i in range(0, len(numeri)): #len(numeri) prende la lunghezza della stringa
 
 #ciclo for sulla lista per indice e per valore Pythonico
 
-for i,valore in enumerate(numeri):
+for i,valore in enumerate(numeri): # enumerate ti da sia l'indice che il valore delle varie celle dell'indice  
     print(f"Nella cella {i} trovo : {valore} ")
+
+    

@@ -1,16 +1,30 @@
-#chiedere all'utente un mac address (hex)
-#1) fare il controllo che il mac address sia valido 
-#2)stamparlo in binario
-#3)stampare i primi 3 byte (vendor) del MAC ADDRESS
+def controllo(lista_mac): #controlla se la lista ha lunghezza giusta come il mac address
+    if(len(lista_mac) != 6):
+        return False
+    else:
+        return True
 
-stringa= input("inserire un MAC ADDRESS")
-print(stringa)
+def controlloNome(lista): #controlla che il nome contenga caratteri presenti nel mac address, se ne trova uno diverso esce
+    mac = input("inserisci mac address: ")
+    for lettera in mac:
+        if lettera not in lista:
+            exit()
+            
+    return mac
+        
+    
+
+lista = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "-"]
 
 
-lista= stringa.split("-")
+mac = controlloNome(lista)
 
-for byte in lista : 
-    print(byte)
-    byte = int(byte,16)
-    print(bin(byte))
+lista_mac = mac.split("-")
 
+if(controllo(lista_mac)): #converte prima da esa e dec, poi da dec in binario
+    for valore in lista_mac:
+        num = int(valore, 16)
+        num = bin(num)
+        print(num)
+else:
+    print("errore")
