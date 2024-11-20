@@ -8,7 +8,9 @@ for valore in numeri :
     print(valore)
 
 #ciclo for sulla lista C-style 
-for i in range(0, len(numeri)): #len(numeri) prende la lunghezza della stringa 
+#len(numeri) prende la lunghezza della stringa 
+
+for i in range(0, len(numeri)): 
     print(numeri[i])
 
 #ciclo for sulla lista per indice e per valore Pythonico
